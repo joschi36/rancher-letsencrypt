@@ -1,6 +1,6 @@
 FROM golang
 MAINTAINER Jan Broer <jan@festplatte.eu.org>
-
+WORKDIR $GOPATH
 RUN make deps && make build
 
 ADD build/rancher-letsencrypt-linux-amd64 /usr/bin/rancher-letsencrypt

@@ -23,7 +23,6 @@ dependencies:
     - git config user.email "no-reply@circleci.com"
     - git remote -v
     - git fetch --tags
-    - git describe --abbrev=0 --tags
 
 test:
   pre: 

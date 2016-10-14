@@ -5,9 +5,8 @@ RUN apk add --no-cache ca-certificates
 
 ENV LETSENCRYPT_RELEASE v0.3.0
 
-ADD https://github.com/joschi36/rancher-letsencrypt/releases/download/${LETSENCRYPT_RELEASE}/rancher-letsencrypt-linux-amd64.tar.gz /tmp/rancher-letsencrypt.tar.gz
+ADD https://github.com/joschi36/rancher-letsencrypt/releases/download/${LETSENCRYPT_RELEASE}/rancher-letsencrypt-linux-amd64.3 /usr/bin/rancher-letsencrypt
 
-RUN tar -zxvf /tmp/rancher-letsencrypt.tar.gz -C /usr/bin \
-	&& chmod +x /usr/bin/rancher-letsencrypt
+RUN chmod +x /usr/bin/rancher-letsencrypt
 
 ENTRYPOINT ["/usr/bin/rancher-letsencrypt"]

@@ -1,4 +1,4 @@
-FROM alpine:3.3
+FROM golang
 MAINTAINER Jan Broer <jan@festplatte.eu.org>
 
 RUN apk add --no-cache ca-certificates

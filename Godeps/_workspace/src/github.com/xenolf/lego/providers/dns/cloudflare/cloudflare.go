@@ -49,7 +49,7 @@ func NewDNSProviderCredentials(email, key string) (*DNSProvider, error) {
 // Timeout returns the timeout and interval to use when checking for DNS
 // propagation. Adjusting here to cope with spikes in propagation times.
 func (c *DNSProvider) Timeout() (timeout, interval time.Duration) {
-	return 120 * time.Second, 2 * time.Second
+	return 600 * time.Second, 5 * time.Second
 }
 
 // Present creates a TXT record to fulfil the dns-01 challenge

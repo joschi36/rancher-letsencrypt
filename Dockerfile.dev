@@ -2,7 +2,7 @@ FROM golang
 MAINTAINER Jan Broer <jan@festplatte.eu.org>
 
 RUN apt-get install ca-certificates
-RUN make build && make image
+RUN make build
 
 ADD build/rancher-letsencrypt-linux-amd64 /usr/bin/rancher-letsencrypt
 

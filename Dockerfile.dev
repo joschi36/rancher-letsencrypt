@@ -1,7 +1,7 @@
 FROM golang
 MAINTAINER Jan Broer <jan@festplatte.eu.org>
 
-RUN apk add --no-cache ca-certificates
+RUN apt-get install ca-certificates
 RUN make ci-release
 
 ADD build/rancher-letsencrypt-linux-amd64 /usr/bin/rancher-letsencrypt
